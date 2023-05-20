@@ -1,0 +1,52 @@
+nodes = data.frame(
+  id = 1:19,
+  feature = names(df) #df
+  keep = list()
+  keep2 = list()
+  for(i in 1:19){
+    keep[[i]] =  which(ce[i,]<=0.7 & ce[i,]>0.6) 
+    keep2[[i]] = which(ce[i,]<=0.6  & ce[i,]!=0) 
+  }
+  
+  to1 = unname(c(unlist(keep)))
+  n1 = lengths(keep)
+  from1 = c(rep(1,n1[1]),rep(2,n1[2]),rep(3,n1[3]),rep(4,n1[4]),rep(5,n1[5]),
+          rep(6,n1[6]),rep(7,n1[7]),rep(8,n1[8]),rep(9,n1[9]),rep(10,n1[10]),
+          rep(11,n1[11]),rep(12,n1[12]),rep(13,n1[13]),rep(14,n1[14]),
+          rep(15,n1[15]),rep(16,n1[16]),rep(17,n1[17]),rep(18,n1[18]),
+          rep(19,n1[19]))
+  
+  weight1 = c(rep(1,length(to1)))
+  
+  to2 = unname(c(unlist(keep2)))
+  n2 = lengths(keep2)
+  from2 = c(rep(1,n2[1]),rep(2,n2[2]),rep(3,n2[3]),rep(4,n2[4]),rep(5,n2[5]),
+          rep(6,n2[6]),rep(7,n2[7]),rep(8,n2[8]),rep(9,n2[9]),rep(10,n2[10]),
+          rep(11,n2[11]),rep(12,n2[12]),rep(13,n2[13]),rep(14,n2[14]),
+          rep(15,n2[15]),rep(16,n2[16]),rep(17,n2[17]),rep(18,n2[18]),
+          rep(19,n2[19]))
+  weight2 = c(rep(2,length(to2)))
+  
+  links= data.frame(
+    from = c(from1,from2),
+    to = c(to1,to2),
+    weight = c(weight1,weight2)
+  )
+  
+  temp<-c()
+  for( i in 1:nrow(links)){
+    temp[i]= ce[links[i,1],links[i,2]]}
+  
+  links$temp = temp
+  links$temp2 = 1-links$temp
+
+  library('igraph')
+  net <- graph_from_data_frame(d=links, vertices=nodes, directed=T) 
+
+  network=visIgraph(net,idToLabel=F,physics=T) %>% visIgraphLayout(layout = "layout_nicely") %>% 
+    visNodes(size=20,shape="circle",borderWidth = 1,
+             color = list( border = "black"),
+             shadow = list(enabled = T, size = 10)) %>% 
+    visEdges(color = "black",width=10, arrows = "to")
+ 
+ 
