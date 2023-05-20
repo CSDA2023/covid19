@@ -1,0 +1,4 @@
+R code condentropy() in library(infotheo) for conditional entropy calculations. 
+
+For H(Y|X), condentropy(Y,X)
+For SCE drop, min( c(condentropy(Y,X1) , condentropy(Y,X2) ) ) - condentropy(Y,X1_X2)
