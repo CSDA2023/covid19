@@ -1,0 +1,18 @@
+
+library(RColorBrewer)
+library(tidyverse)
+library(magrittr)
+library(reshape2); library(ggplot2)
+
+cols = colorRampPalette((brewer.pal(9, "Reds")))(12) #12; adjust for the max length
+df %<>% as.matrix()
+keep = melt(df) 
+
+ggplot(keep, aes(x = Var1, y = Var2, fill = factor(value))) + 
+  geom_tile() + 
+  scale_fill_manual(name ="length",values=cols)+
+  labs(x="area",y="area")+
+  theme(
+    axis.text.y = element_text(size = 5),
+    axis.text.x = element_text(size = 5,angle = 90)
+  )
