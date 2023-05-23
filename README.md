@@ -4,8 +4,8 @@ https://ccminyi.shinyapps.io/Covid_daily_infection_rate_in_TW/
 
 For Table 2, 4, 6, and 7: ues CE and SCE drop R code.     
 Results:  
-Table 2: CE and drop.csv  (use data0805.csv)  
-Table 4: CE and drop-right90.csv  (use data0805.csv)  
+Table 2: CE and drop.csv  (use data0805cat.csv)  
+Table 4: CE and drop-right90.csv  (use data0805cat.csv)  
 Table 6: ce and drop data0805-RL_NS.csv  (use data0805-leftright-cat.csv)    
 Table 7: ce and drop data0805-RL_city.csv (use data0805-leftright-cat.csv)      
 
