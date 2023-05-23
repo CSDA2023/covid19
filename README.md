@@ -2,7 +2,7 @@
 All the data used in the analysis are available on the COVID-19 website:
 https://ccminyi.shinyapps.io/Covid_daily_infection_rate_in_TW/  
 
-For Table 2, 4, 6, and 7: ues CE and SCE drop R code. 
+For Table 2, 4, 6, and 7: ues CE and SCE drop R code.     
 Results:  
 Table 2: CE and drop.csv    
 Table 4: CE and drop-right90.csv    
