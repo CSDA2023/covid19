@@ -9,6 +9,6 @@ Table 4: CE and drop-right90.csv
 Table 6: ce and drop data0805-RL_NS.csv   
 Table 7: ce and drop data0805-RL_city.csv   
 
-For Fig 5: use Directed assciative network R code. (Fig 7 can be created by modified the direction code)  
+For Fig 5: use Directed assciative network R code. (Figure 7 can be created by modifying the direction part in the R code.)  
 
 For Fig 9, 10, 11, and 12: use Heatmap R code with the treepath results csv files 
