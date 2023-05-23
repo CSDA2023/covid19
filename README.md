@@ -11,4 +11,4 @@ Table 7: ce and drop data0805-RL_city.csv
 
 For Fig 5: use Directed assciative network R code. (Figure 7 can be created by modifying the direction part in the R code.)  
 
-For Fig 9, 10, 11, and 12: use Heatmap R code with the treepath results csv files 
+For Fig 9, 10, 11, and 12: use Heatmap R code with the treepath results csv files. The trees are created by using big-cat.csv 
